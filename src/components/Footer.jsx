@@ -3,6 +3,7 @@ import CassetteLogo from './CassetteLogo'
 const FOOTER_LINKS = {
   Product: [
     { label: 'How It Works', href: '#how-it-works' },
+    { label: 'The Book', href: '#the-book' },
     { label: 'Features', href: '#features' },
     { label: 'Pricing', href: '#pricing' },
     { label: 'FAQ', href: '#faq' },

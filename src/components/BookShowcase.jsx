@@ -2,7 +2,7 @@ import { BookOpen, Printer, FileText, ArrowRight } from 'lucide-react'
 
 export default function BookShowcase({ onOpenWaitlist }) {
   return (
-    <section className="bg-tape-black py-20 md:py-28">
+    <section id="the-book" className="bg-tape-black py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Book mockup */}

@@ -4,6 +4,7 @@ import CassetteLogo from './CassetteLogo'
 
 const NAV_LINKS = [
   { label: 'How It Works', href: '#how-it-works' },
+  { label: 'The Book', href: '#the-book' },
   { label: 'Features', href: '#features' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
