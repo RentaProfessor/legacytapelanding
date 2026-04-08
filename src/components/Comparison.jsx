@@ -39,14 +39,14 @@ export default function Comparison() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
-            Built different — not just another app
+            Built different. Not just another app.
           </h2>
           <p className="mt-4 text-lg text-graphite">
             See how Legacy Tape compares to the alternatives families usually settle for.
           </p>
         </div>
 
-        {/* Table — scrollable on mobile */}
+        {/* Table: scrollable on mobile */}
         <div className="mx-auto mt-14 max-w-5xl overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-sm">
             <thead>

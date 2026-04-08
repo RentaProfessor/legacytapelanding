@@ -11,7 +11,7 @@ export default function FinalCTA({ onOpenWaitlist }) {
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/60">
           Every year that passes, details fade, voices change, and memories
           become harder to reach. Legacy Tape turns those stories into a
-          beautiful, printed book — a family heirloom you can hold in your hands.
+          beautiful, printed book: a family heirloom you can hold in your hands.
           Start while there is still time.
         </p>
 
@@ -24,13 +24,17 @@ export default function FinalCTA({ onOpenWaitlist }) {
             Join the Waitlist
             <ArrowRight size={16} />
           </button>
-          <a
-            href="#demo"
+          <button
+            type="button"
+            onClick={() => {
+              document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })
+              setTimeout(() => window.dispatchEvent(new Event('demo-autoplay')), 800)
+            }}
             className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white/80 transition-all hover:border-white/30 hover:text-white"
           >
             <Play size={16} />
             Watch the Demo
-          </a>
+          </button>
         </div>
 
         <p className="mt-6 text-xs text-white/30">

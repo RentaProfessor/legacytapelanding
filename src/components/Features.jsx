@@ -13,14 +13,14 @@ const FEATURES = [
     title: 'Familiar physical controls',
     benefit: 'No learning curve for seniors.',
     result:
-      'Grandparents actually pick it up and press record — because it looks and feels like something they already know.',
+      'Grandparents actually pick it up and press record because it looks and feels like something they already know.',
   },
   {
     icon: BrainCircuit,
     title: 'AI-guided interviewing',
     benefit: 'Better questions, richer stories.',
     result:
-      'Context-aware follow-ups draw out details that a generic voice memo never would — the name of the street, the year it happened, why it mattered.',
+      'Context-aware follow-ups draw out details that a generic voice memo never would: the name of the street, the year it happened, why it mattered.',
   },
   {
     icon: FileAudio,
@@ -34,7 +34,7 @@ const FEATURES = [
     title: 'Chapter organization',
     benefit: 'Memories stay structured.',
     result:
-      'Stories are grouped into themes and chapters — childhood, career, family, life lessons — ready to browse or print.',
+      'Stories are grouped into themes and chapters (childhood, career, family, life lessons), ready to browse or print.',
   },
   {
     icon: Sparkles,
@@ -61,7 +61,7 @@ export default function Features() {
             Everything it takes to turn memories into a legacy
           </h2>
           <p className="mt-4 text-lg text-graphite">
-            Designed so the storyteller can focus on remembering — and the family gets something they will treasure forever.
+            Designed so the storyteller can focus on remembering, and the family gets something they will treasure forever.
           </p>
         </div>
 

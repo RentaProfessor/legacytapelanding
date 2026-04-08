@@ -90,7 +90,7 @@ export default function Pricing({ onOpenWaitlist }) {
             onClick={onOpenWaitlist}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-amber px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-amber/20 transition-all hover:bg-amber-dark hover:shadow-xl hover:shadow-amber/30"
           >
-            Join the Waitlist — Lock In Early Pricing
+            Join the waitlist. Lock in early pricing.
             <ArrowRight size={16} />
           </button>
           <p className="mt-4 text-xs text-muted-gray">

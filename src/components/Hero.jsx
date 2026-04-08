@@ -19,7 +19,7 @@ export default function Hero({ onOpenWaitlist }) {
 
             <p className="mt-6 text-lg leading-relaxed text-graphite sm:text-xl">
               A retro-inspired recording device paired with AI that helps
-              grandparents tell their life stories — and turns them into a
+              grandparents tell their life stories, and turns them into a
               beautiful, printed book the whole family can hold onto forever.
             </p>
 
@@ -32,13 +32,17 @@ export default function Hero({ onOpenWaitlist }) {
                 Join the Waitlist
                 <ArrowRight size={16} />
               </button>
-              <a
-                href="#demo"
+              <button
+                type="button"
+                onClick={() => {
+                  document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })
+                  setTimeout(() => window.dispatchEvent(new Event('demo-autoplay')), 800)
+                }}
                 className="inline-flex items-center gap-2 rounded-full border border-metallic bg-warm-white px-7 py-3.5 text-sm font-semibold text-charcoal shadow-sm transition-all hover:border-charcoal/20 hover:shadow-md"
               >
                 <Play size={16} />
                 See How It Works
-              </a>
+              </button>
             </div>
 
             <p className="mt-6 text-xs text-muted-gray">

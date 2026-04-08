@@ -16,7 +16,7 @@ export default function CassetteLogo({ size = 32, className = '', animated = fal
       className={className}
       aria-hidden="true"
     >
-      {/* Outer shell — light warm taupe */}
+      {/* Outer shell: light warm taupe */}
       <rect x="0" y="0" width="60" height="42" rx="4" fill="#A8998A" />
       <rect x="1" y="1" width="58" height="40" rx="3.5" fill="none" stroke="white" strokeWidth="0.6" opacity="0.25" />
 

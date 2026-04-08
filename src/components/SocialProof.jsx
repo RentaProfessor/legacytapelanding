@@ -70,7 +70,7 @@ export default function SocialProof() {
             ))}
           </div>
           <p className="mt-4 text-center text-[10px] text-muted-gray/60">
-            Placeholder — replace with actual press logos
+            Replace with actual press logos when available.
           </p>
         </div>
       </div>

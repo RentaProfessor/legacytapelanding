@@ -6,7 +6,7 @@ const STEPS = [
     number: '01',
     title: 'Press record',
     description:
-      'Pick up the Legacy Tape device — a familiar, one-button recorder designed for comfort, not complexity.',
+      'Pick up the Legacy Tape device, a familiar, one-button recorder designed for comfort, not complexity.',
   },
   {
     icon: MessageCircleQuestion,
@@ -27,7 +27,7 @@ const STEPS = [
     number: '04',
     title: 'Receive your book',
     description:
-      'Stories become a professionally formatted, printed hardcover book — a real, physical legacy your family keeps forever.',
+      'Stories become a professionally formatted, printed hardcover book: a real, physical legacy your family keeps forever.',
   },
 ]
 

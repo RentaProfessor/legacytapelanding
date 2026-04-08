@@ -23,7 +23,7 @@ const PROBLEMS = [
     icon: Brain,
     title: 'Memory doesn\'t wait',
     description:
-      'The stories that define a family — the childhood adventures, the hard-won wisdom, the quiet moments — are stored in one irreplaceable place.',
+      'The stories that define a family (the childhood adventures, the hard-won wisdom, the quiet moments) are stored in one irreplaceable place.',
   },
 ]
 

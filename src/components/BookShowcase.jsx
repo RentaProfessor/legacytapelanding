@@ -98,7 +98,7 @@ export default function BookShowcase({ onOpenWaitlist }) {
             <p className="mt-6 text-lg leading-relaxed text-white/60">
               This is not just audio storage. Legacy Tape automatically
               transforms spoken stories into organized chapters, polished
-              narratives, and a professionally printed hardcover book — something
+              narratives, and a professionally printed hardcover book: something
               your family can hold, read, and pass down for generations.
             </p>
 
@@ -116,7 +116,7 @@ export default function BookShowcase({ onOpenWaitlist }) {
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                 <BookOpen size={20} className="mb-3 text-amber" />
                 <h4 className="text-sm font-semibold text-white">A family heirloom</h4>
-                <p className="mt-1 text-xs text-white/40">Not a file on a phone — a real object on a shelf</p>
+                <p className="mt-1 text-xs text-white/40">Not a file on a phone. A real object on a shelf.</p>
               </div>
             </div>
 

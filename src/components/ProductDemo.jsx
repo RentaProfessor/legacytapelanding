@@ -1,9 +1,19 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { Play, Pause } from 'lucide-react'
 
 export default function ProductDemo() {
   const videoRef = useRef(null)
   const [playing, setPlaying] = useState(false)
+
+  useEffect(() => {
+    const handleAutoplay = () => {
+      if (videoRef.current) {
+        videoRef.current.play()
+      }
+    }
+    window.addEventListener('demo-autoplay', handleAutoplay)
+    return () => window.removeEventListener('demo-autoplay', handleAutoplay)
+  }, [])
 
   const togglePlay = () => {
     if (!videoRef.current) return
@@ -12,11 +22,10 @@ export default function ProductDemo() {
     } else {
       videoRef.current.play()
     }
-    setPlaying(!playing)
   }
 
   return (
-    <section id="demo" className="py-20 md:py-28">
+    <section id="demo" className="py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
@@ -27,7 +36,7 @@ export default function ProductDemo() {
           </p>
         </div>
 
-        <div className="mx-auto mt-14 max-w-4xl">
+        <div className="mx-auto mt-8 max-w-4xl">
           <div className="overflow-hidden rounded-3xl border border-metallic/50 bg-tape-black p-3 shadow-2xl">
             <div
               className="relative cursor-pointer overflow-hidden rounded-2xl"
@@ -43,7 +52,6 @@ export default function ProductDemo() {
                 onPlay={() => setPlaying(true)}
               />
 
-              {/* Play/pause overlay — fades out while playing */}
               <div
                 className={`absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 ${playing ? 'opacity-0 hover:opacity-100' : 'opacity-100'}`}
               >

@@ -9,7 +9,7 @@ export default function DualAudience() {
             Made for storytellers. Treasured by families.
           </h2>
           <p className="mt-4 text-lg text-white/60">
-            Two audiences, one shared purpose — preserving what matters before it is gone.
+            Two audiences, one shared purpose: preserving what matters before it is gone.
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export default function DualAudience() {
             <p className="mt-3 text-base leading-relaxed text-white/60">
               Your grandparent, parent, or elder does not need to learn new
               technology. Legacy Tape feels like the tape recorders they grew up
-              with — warm, familiar, and completely intuitive.
+              with: warm, familiar, and completely intuitive.
             </p>
             <ul className="mt-6 space-y-3">
               {[
@@ -52,7 +52,7 @@ export default function DualAudience() {
             </h3>
             <p className="mt-3 text-base leading-relaxed text-white/60">
               Children and grandchildren get something infinitely more valuable
-              than scattered voice notes — a real, printed book of the stories
+              than scattered voice notes: a real, printed book of the stories
               told by the people who shaped their lives.
             </p>
             <ul className="mt-6 space-y-3">

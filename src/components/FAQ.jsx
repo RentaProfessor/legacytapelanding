@@ -8,7 +8,7 @@ const FAQS = [
   },
   {
     q: 'Does my grandparent need a smartphone?',
-    a: 'Not at all. The Legacy Tape device works completely on its own. Your grandparent presses one button and talks. The companion app is for family members who want to follow along, read chapters, and manage exports — but the storyteller never needs a phone or computer.',
+    a: 'Not at all. The Legacy Tape device works completely on its own. Your grandparent presses one button and talks. The companion app is for family members who want to follow along, read chapters, and manage exports, but the storyteller never needs a phone or computer.',
   },
   {
     q: 'What does the companion app do?',
@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     q: 'Can the stories become a printed book?',
-    a: 'Absolutely. Once chapters are organized and optionally polished, you can export them as a beautifully formatted book — either a digital PDF or a professionally printed hardcover through our printing partner.',
+    a: 'Absolutely. Once chapters are organized and optionally polished, you can export them as a beautifully formatted book, either a digital PDF or a professionally printed hardcover through our printing partner.',
   },
   {
     q: 'How much editing does the AI do?',
@@ -28,7 +28,7 @@ const FAQS = [
   },
   {
     q: 'Is the original recording always preserved?',
-    a: 'Always. The original audio and unedited transcript are permanently saved. Any AI cleanup or ghostwriter edits are layered on top — your family\'s original words are never overwritten.',
+    a: 'Always. The original audio and unedited transcript are permanently saved. Any AI cleanup or ghostwriter edits are layered on top. Your family\'s original words are never overwritten.',
   },
   {
     q: 'When will Legacy Tape be available?',
@@ -40,7 +40,7 @@ const FAQS = [
   },
   {
     q: 'What makes this different from StoryWorth or other recording apps?',
-    a: 'StoryWorth relies on written email prompts — which many seniors find tedious or avoid. Generic recording apps capture audio but do nothing with it. Legacy Tape is the only solution that combines a physical device seniors already understand, AI-guided spoken interviews, automatic transcription and chapter organization, and a family app to keep everyone connected.',
+    a: 'StoryWorth relies on written email prompts, which many seniors find tedious or avoid. Generic recording apps capture audio but do nothing with it. Legacy Tape is the only solution that combines a physical device seniors already understand, AI-guided spoken interviews, automatic transcription and chapter organization, and a family app to keep everyone connected.',
   },
 ]
 
