@@ -8,7 +8,6 @@ import Features from '../components/Features'
 import BookShowcase from '../components/BookShowcase'
 import Comparison from '../components/Comparison'
 import DualAudience from '../components/DualAudience'
-import SocialProof from '../components/SocialProof'
 import FAQ from '../components/FAQ'
 import Pricing from '../components/Pricing'
 import FinalCTA from '../components/FinalCTA'
@@ -34,7 +33,6 @@ export default function LandingPage({ onOpenWaitlist }) {
       <BookShowcase onOpenWaitlist={onOpenWaitlist} />
       <Comparison />
       <DualAudience />
-      <SocialProof />
       <Pricing onOpenWaitlist={onOpenWaitlist} />
       <FAQ />
       <FinalCTA onOpenWaitlist={onOpenWaitlist} />
