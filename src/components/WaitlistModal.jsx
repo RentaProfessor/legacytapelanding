@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react'
-import { X, ArrowRight, Check } from 'lucide-react'
+import { X, ArrowRight, Check, Loader2 } from 'lucide-react'
 import CassetteLogo from './CassetteLogo'
+
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdpvoge'
 
 export default function WaitlistModal({ open, onClose }) {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [role, setRole] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     if (open) {
@@ -17,15 +21,34 @@ export default function WaitlistModal({ open, onClose }) {
       setEmail('')
       setName('')
       setRole('')
+      setError('')
     }
     return () => { document.body.style.overflow = '' }
   }, [open])
 
   if (!open) return null
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError('')
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, role }),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        const data = await res.json()
+        setError(data?.errors?.[0]?.message || 'Something went wrong. Please try again.')
+      }
+    } catch {
+      setError('Network error. Please check your connection and try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -137,12 +160,28 @@ export default function WaitlistModal({ open, onClose }) {
                 </select>
               </div>
 
+              {error && (
+                <p className="rounded-xl bg-red-50 px-4 py-2.5 text-xs text-red-600">
+                  {error}
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-amber px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-amber/20 transition-all hover:bg-amber-dark hover:shadow-xl hover:shadow-amber/30"
+                disabled={loading}
+                className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-amber px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-amber/20 transition-all hover:bg-amber-dark hover:shadow-xl hover:shadow-amber/30 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Join the Waitlist
-                <ArrowRight size={16} />
+                {loading ? (
+                  <>
+                    <Loader2 size={16} className="animate-spin" />
+                    Submitting…
+                  </>
+                ) : (
+                  <>
+                    Join the Waitlist
+                    <ArrowRight size={16} />
+                  </>
+                )}
               </button>
             </form>
 
