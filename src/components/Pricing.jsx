@@ -1,4 +1,4 @@
-import { ArrowRight, Disc3, Repeat, Check } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 
 const DEVICE_FEATURES = [
   'Retro-inspired physical recorder',
@@ -33,9 +33,7 @@ export default function Pricing({ onOpenWaitlist }) {
         <div className="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-2">
           {/* Device */}
           <div className="rounded-3xl border border-metallic/50 bg-warm-white p-8 shadow-sm">
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-tape-black">
-              <Disc3 size={22} className="text-amber" />
-            </div>
+            <div className="mb-5 h-px w-10 bg-amber/50" />
             <h3 className="text-sm font-semibold tracking-widest text-muted-gray uppercase">
               The Device
             </h3>
@@ -60,9 +58,7 @@ export default function Pricing({ onOpenWaitlist }) {
             <div className="absolute -top-3.5 right-6 rounded-full bg-amber px-4 py-1 text-xs font-semibold text-white">
               Required
             </div>
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber/10">
-              <Repeat size={22} className="text-amber" />
-            </div>
+            <div className="mb-5 h-px w-10 bg-amber/50" />
             <h3 className="text-sm font-semibold tracking-widest text-muted-gray uppercase">
               Partner Subscription
             </h3>

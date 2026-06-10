@@ -1,4 +1,4 @@
-import { BookOpen, Printer, FileText, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function BookShowcase({ onOpenWaitlist }) {
   return (
@@ -10,8 +10,6 @@ export default function BookShowcase({ onOpenWaitlist }) {
             <div className="relative">
               {/* Book spine + cover */}
               <div className="relative mx-auto w-72 sm:w-80">
-                {/* Shadow behind book */}
-                <div className="absolute -inset-4 rounded-3xl bg-amber/5 blur-2xl" />
 
                 {/* Book body */}
                 <div className="relative overflow-hidden rounded-r-lg rounded-l-sm bg-gradient-to-br from-[#F5F0E8] to-[#E8E0D4] shadow-2xl">
@@ -86,7 +84,6 @@ export default function BookShowcase({ onOpenWaitlist }) {
           {/* Copy */}
           <div className="lg:order-0">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber/10 px-4 py-1.5 text-xs font-semibold text-amber">
-              <BookOpen size={14} />
               The Final Product
             </div>
 
@@ -104,17 +101,17 @@ export default function BookShowcase({ onOpenWaitlist }) {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <FileText size={20} className="mb-3 text-amber" />
+                <div className="mb-3 h-px w-8 bg-amber/50" />
                 <h4 className="text-sm font-semibold text-white">Auto-organized chapters</h4>
                 <p className="mt-1 text-xs text-white/40">Stories sorted by theme, time period, or topic</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <Printer size={20} className="mb-3 text-amber" />
+                <div className="mb-3 h-px w-8 bg-amber/50" />
                 <h4 className="text-sm font-semibold text-white">Professionally printed</h4>
                 <p className="mt-1 text-xs text-white/40">Hardcover book shipped directly to your family</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <BookOpen size={20} className="mb-3 text-amber" />
+                <div className="mb-3 h-px w-8 bg-amber/50" />
                 <h4 className="text-sm font-semibold text-white">A family heirloom</h4>
                 <p className="mt-1 text-xs text-white/40">Not a file on a phone. A real object on a shelf.</p>
               </div>

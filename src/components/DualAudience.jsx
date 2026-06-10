@@ -1,5 +1,3 @@
-import { Heart, BookHeart } from 'lucide-react'
-
 export default function DualAudience() {
   return (
     <section className="bg-tape-black py-20 md:py-28">
@@ -16,9 +14,7 @@ export default function DualAudience() {
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {/* For storytellers */}
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber/10">
-              <Heart size={24} className="text-amber" />
-            </div>
+            <div className="mb-5 h-px w-10 bg-amber/50" />
             <h3 className="font-serif text-2xl font-bold text-white">
               For the storyteller
             </h3>
@@ -44,9 +40,7 @@ export default function DualAudience() {
 
           {/* For families */}
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber/10">
-              <BookHeart size={24} className="text-amber" />
-            </div>
+            <div className="mb-5 h-px w-10 bg-amber/50" />
             <h3 className="font-serif text-2xl font-bold text-white">
               For the family
             </h3>

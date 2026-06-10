@@ -1,29 +1,23 @@
-import { Disc3, MessageCircleQuestion, FileText, BookOpen } from 'lucide-react'
-
 const STEPS = [
   {
-    icon: Disc3,
     number: '01',
     title: 'Press record',
     description:
       'Pick up the Legacy Tape device, a familiar, one-button recorder designed for comfort, not complexity.',
   },
   {
-    icon: MessageCircleQuestion,
     number: '02',
     title: 'Answer guided prompts',
     description:
       'AI-powered questions gently guide the conversation, drawing out deeper memories and follow-up details.',
   },
   {
-    icon: FileText,
     number: '03',
     title: 'Stories are organized',
     description:
       'Every recording is transcribed, cleaned up, and sorted into structured chapters automatically.',
   },
   {
-    icon: BookOpen,
     number: '04',
     title: 'Receive your book',
     description:
@@ -49,14 +43,10 @@ export default function HowItWorks() {
           <div className="absolute top-14 left-[12.5%] right-[12.5%] hidden h-px border-t border-dashed border-white/10 lg:block" />
 
           {STEPS.map((step) => {
-            const Icon = step.icon
             return (
               <div key={step.number} className="relative text-center">
-                <div className="relative z-10 mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 ring-1 ring-white/10">
-                  <Icon size={24} className="text-amber" />
-                </div>
-                <div className="mb-2 text-xs font-semibold tracking-widest text-amber/70 uppercase">
-                  Step {step.number}
+                <div className="relative z-10 mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-tape-black ring-1 ring-white/15">
+                  <span className="font-serif text-xl font-bold text-amber">{step.number}</span>
                 </div>
                 <h3 className="text-lg font-semibold text-white">
                   {step.title}
