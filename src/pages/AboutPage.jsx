@@ -1,7 +1,14 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 
 export default function AboutPage({ onOpenWaitlist }) {
+  useEffect(() => {
+    const previous = document.title
+    document.title = 'About | Legacy Tape'
+    return () => { document.title = previous }
+  }, [])
+
   return (
     <main className="pt-28 pb-20 md:pt-36 md:pb-28">
       <article className="mx-auto max-w-2xl px-6">

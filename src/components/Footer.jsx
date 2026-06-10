@@ -11,14 +11,8 @@ const FOOTER_LINKS = {
   ],
   Company: [
     { label: 'About', to: '/about' },
-    { label: 'Blog', href: '#' },
-    { label: 'Careers', href: '#' },
-    { label: 'Contact', href: '#' },
-  ],
-  Legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
-    { label: 'Data Security', href: '#' },
+    { label: 'Contact', href: 'mailto:futureclaritytechnologies@gmail.com' },
+    { label: 'FutureClarity Technologies', href: 'https://futureclaritytech.pages.dev/' },
   ],
 }
 
@@ -31,8 +25,13 @@ function FooterLink({ link }) {
       </Link>
     )
   }
+  const external = link.href?.startsWith('http')
   return (
-    <a href={link.href} className={className}>
+    <a
+      href={link.href}
+      className={className}
+      {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+    >
       {link.label}
     </a>
   )
@@ -42,7 +41,7 @@ export default function Footer({ onOpenWaitlist }) {
   return (
     <footer className="border-t border-white/10 bg-charcoal">
       <div className="mx-auto max-w-7xl px-6 py-14">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-2">
               <CassetteLogo size={32} className="text-white/80" />
@@ -53,6 +52,10 @@ export default function Footer({ onOpenWaitlist }) {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/40">
               A retro-inspired memory preservation device that helps families
               capture, organize, and keep the stories that matter most.
+            </p>
+            <p className="mt-4 max-w-sm text-xs leading-relaxed text-white/30">
+              Waitlist details are only used to contact you about Legacy Tape.
+              No spam, and your information is never sold.
             </p>
           </div>
 
@@ -73,8 +76,8 @@ export default function Footer({ onOpenWaitlist }) {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 sm:flex-row">
-          <p className="text-xs text-white/30">
-            &copy; {new Date().getFullYear()} Legacy Tape. All rights reserved.
+          <p className="text-center text-xs text-white/30 sm:text-left">
+            &copy; {new Date().getFullYear()} Legacy Tape. A FutureClarity Technologies product.
           </p>
           <button
             type="button"

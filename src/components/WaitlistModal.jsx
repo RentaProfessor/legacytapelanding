@@ -26,6 +26,15 @@ export default function WaitlistModal({ open, onClose }) {
     return () => { document.body.style.overflow = '' }
   }, [open])
 
+  useEffect(() => {
+    if (!open) return
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [open, onClose])
+
   if (!open) return null
 
   const handleSubmit = async (e) => {
@@ -52,7 +61,12 @@ export default function WaitlistModal({ open, onClose }) {
   }
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div
+      className="fixed inset-0 z-[100] flex items-end justify-center sm:items-center sm:p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Join the waitlist"
+    >
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-charcoal/60 backdrop-blur-sm"
@@ -60,13 +74,13 @@ export default function WaitlistModal({ open, onClose }) {
         aria-hidden="true"
       />
 
-      {/* Modal */}
-      <div className="relative w-full max-w-md animate-fade-in-up rounded-3xl border border-metallic/50 bg-warm-white p-8 shadow-2xl">
+      {/* Modal: bottom sheet on phones, centered card from sm up */}
+      <div className="relative max-h-[92dvh] w-full max-w-md animate-fade-in-up overflow-y-auto rounded-t-3xl border border-metallic/50 bg-warm-white p-6 pb-[max(2rem,env(safe-area-inset-bottom))] shadow-2xl sm:rounded-3xl sm:p-8">
         {/* Close button */}
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full text-muted-gray transition-colors hover:bg-metallic/20 hover:text-charcoal"
+          className="absolute top-3 right-3 flex h-11 w-11 items-center justify-center rounded-full text-muted-gray transition-colors hover:bg-metallic/20 hover:text-charcoal"
           aria-label="Close"
         >
           <X size={18} />
@@ -121,7 +135,7 @@ export default function WaitlistModal({ open, onClose }) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Jane Smith"
-                  className="w-full rounded-xl border border-metallic bg-white px-4 py-3 text-sm text-charcoal placeholder:text-muted-gray focus:border-amber focus:ring-2 focus:ring-amber/20 focus:outline-none"
+                  className="w-full rounded-xl border border-metallic bg-white px-4 py-3 text-base text-charcoal placeholder:text-muted-gray focus:border-amber focus:ring-2 focus:ring-amber/20 focus:outline-none"
                 />
               </div>
 
@@ -136,7 +150,7 @@ export default function WaitlistModal({ open, onClose }) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="jane@example.com"
-                  className="w-full rounded-xl border border-metallic bg-white px-4 py-3 text-sm text-charcoal placeholder:text-muted-gray focus:border-amber focus:ring-2 focus:ring-amber/20 focus:outline-none"
+                  className="w-full rounded-xl border border-metallic bg-white px-4 py-3 text-base text-charcoal placeholder:text-muted-gray focus:border-amber focus:ring-2 focus:ring-amber/20 focus:outline-none"
                 />
               </div>
 
@@ -149,7 +163,7 @@ export default function WaitlistModal({ open, onClose }) {
                   required
                   value={role}
                   onChange={(e) => setRole(e.target.value)}
-                  className="w-full appearance-none rounded-xl border border-metallic bg-white px-4 py-3 text-sm text-charcoal focus:border-amber focus:ring-2 focus:ring-amber/20 focus:outline-none"
+                  className="w-full appearance-none rounded-xl border border-metallic bg-white px-4 py-3 text-base text-charcoal focus:border-amber focus:ring-2 focus:ring-amber/20 focus:outline-none"
                 >
                   <option value="" disabled>Select one</option>
                   <option value="child">Son or daughter wanting to preserve a parent's stories</option>

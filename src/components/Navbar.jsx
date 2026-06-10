@@ -58,7 +58,7 @@ export default function Navbar({ onOpenWaitlist }) {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg p-2 text-graphite lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-graphite lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}
@@ -74,7 +74,7 @@ export default function Navbar({ onOpenWaitlist }) {
               <li key={link.hash}>
                 <a
                   href={sectionHref(link.hash)}
-                  className="block rounded-lg px-3 py-2.5 text-sm font-medium text-graphite transition-colors hover:bg-metallic/20 hover:text-charcoal"
+                  className="block rounded-lg px-3 py-3 text-base font-medium text-graphite transition-colors hover:bg-metallic/20 hover:text-charcoal"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
@@ -84,7 +84,7 @@ export default function Navbar({ onOpenWaitlist }) {
             <li>
               <Link
                 to="/about"
-                className="block rounded-lg px-3 py-2.5 text-sm font-medium text-graphite transition-colors hover:bg-metallic/20 hover:text-charcoal"
+                className="block rounded-lg px-3 py-3 text-base font-medium text-graphite transition-colors hover:bg-metallic/20 hover:text-charcoal"
                 onClick={() => setMobileOpen(false)}
               >
                 About
@@ -93,7 +93,7 @@ export default function Navbar({ onOpenWaitlist }) {
             <li className="mt-2">
               <button
                 type="button"
-                className="block w-full rounded-full bg-amber px-5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all hover:bg-amber-dark"
+                className="block w-full rounded-full bg-amber px-5 py-3 text-center text-sm font-semibold text-white shadow-sm transition-all hover:bg-amber-dark"
                 onClick={() => { setMobileOpen(false); onOpenWaitlist() }}
               >
                 Join the Waitlist

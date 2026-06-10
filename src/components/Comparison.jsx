@@ -46,8 +46,39 @@ export default function Comparison() {
           </p>
         </div>
 
-        {/* Table: scrollable on mobile */}
-        <div className="mx-auto mt-14 max-w-5xl overflow-x-auto">
+        {/* Mobile: stacked feature cards instead of a cramped table */}
+        <div className="mx-auto mt-10 max-w-md space-y-3 md:hidden">
+          {ROWS.map((row, rowIdx) => {
+            const someHave = COMPETITORS.some((c) => c.values[rowIdx])
+            return (
+              <div key={row} className="rounded-2xl border border-metallic/50 bg-warm-white p-4">
+                <p className="text-sm font-semibold text-charcoal">{row}</p>
+                <div className="mt-3 flex items-center justify-between gap-3 text-xs">
+                  <span className="inline-flex items-center gap-1.5 font-semibold text-amber">
+                    <Check size={14} strokeWidth={2.5} />
+                    Legacy Tape
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-muted-gray">
+                    {someHave ? (
+                      'Only some alternatives'
+                    ) : (
+                      <>
+                        <X size={14} />
+                        The alternatives
+                      </>
+                    )}
+                  </span>
+                </div>
+              </div>
+            )
+          })}
+          <p className="pt-2 text-center text-xs text-muted-gray">
+            Compared with voice memos, journaling apps, family history services, and StoryWorth.
+          </p>
+        </div>
+
+        {/* Desktop: full comparison table */}
+        <div className="mx-auto mt-14 hidden max-w-5xl overflow-x-auto md:block">
           <table className="w-full min-w-[640px] border-collapse text-sm">
             <thead>
               <tr className="border-b border-metallic/40">

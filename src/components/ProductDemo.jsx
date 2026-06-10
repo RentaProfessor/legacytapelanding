@@ -45,6 +45,8 @@ export default function ProductDemo() {
               <video
                 ref={videoRef}
                 src="/demo.mp4"
+                poster="/demo-poster.jpg"
+                preload="metadata"
                 className="w-full rounded-2xl"
                 playsInline
                 onEnded={() => setPlaying(false)}

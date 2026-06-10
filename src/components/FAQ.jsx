@@ -83,7 +83,7 @@ export default function FAQ() {
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-200 ${isOpen ? 'max-h-96 pb-5' : 'max-h-0'}`}
+                  className={`overflow-hidden transition-all duration-200 ${isOpen ? 'max-h-[40rem] pb-5' : 'max-h-0'}`}
                 >
                   <p className="text-sm leading-relaxed text-graphite">
                     {faq.a}

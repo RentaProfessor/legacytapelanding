@@ -5,8 +5,8 @@ export default function BookShowcase({ onOpenWaitlist }) {
     <section id="the-book" className="bg-tape-black py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Book mockup */}
-          <div className="relative mx-auto w-full max-w-md lg:order-1">
+          {/* Book mockup: after the copy on phones, right column on desktop */}
+          <div className="relative order-last mx-auto w-full max-w-md lg:order-1">
             <div className="relative">
               {/* Book spine + cover */}
               <div className="relative mx-auto w-72 sm:w-80">
@@ -18,7 +18,7 @@ export default function BookShowcase({ onOpenWaitlist }) {
                   {/* Spine edge */}
                   <div className="absolute top-0 left-0 h-full w-3 bg-gradient-to-r from-[#B8A89A] to-[#D4CFC8]" />
 
-                  <div className="px-8 pt-12 pb-8 pl-10">
+                  <div className="px-6 pb-8 pt-12 pl-8 sm:px-8 sm:pl-10">
                     {/* Decorative top rule */}
                     <div className="mb-6 h-px bg-amber/30" />
 
@@ -39,27 +39,27 @@ export default function BookShowcase({ onOpenWaitlist }) {
                     {/* Chapter preview */}
                     <div className="mt-6 space-y-3">
                       <div className="flex items-baseline justify-between text-xs text-muted-gray">
-                        <span>Chapter 1: The Early Years</span>
+                        <span className="truncate">Chapter 1: The Early Years</span>
                         <span className="ml-2 border-b border-dotted border-metallic flex-1 mx-2" />
                         <span>1</span>
                       </div>
                       <div className="flex items-baseline justify-between text-xs text-muted-gray">
-                        <span>Chapter 2: Growing Up on Pine Street</span>
+                        <span className="truncate">Chapter 2: Growing Up on Pine Street</span>
                         <span className="ml-2 border-b border-dotted border-metallic flex-1 mx-2" />
                         <span>14</span>
                       </div>
                       <div className="flex items-baseline justify-between text-xs text-muted-gray">
-                        <span>Chapter 3: Love & Marriage</span>
+                        <span className="truncate">Chapter 3: Love & Marriage</span>
                         <span className="ml-2 border-b border-dotted border-metallic flex-1 mx-2" />
                         <span>32</span>
                       </div>
                       <div className="flex items-baseline justify-between text-xs text-muted-gray">
-                        <span>Chapter 4: A Family of Our Own</span>
+                        <span className="truncate">Chapter 4: A Family of Our Own</span>
                         <span className="ml-2 border-b border-dotted border-metallic flex-1 mx-2" />
                         <span>51</span>
                       </div>
                       <div className="flex items-baseline justify-between text-xs text-muted-gray">
-                        <span>Chapter 5: Lessons I Want You to Know</span>
+                        <span className="truncate">Chapter 5: Lessons I Want You to Know</span>
                         <span className="ml-2 border-b border-dotted border-metallic flex-1 mx-2" />
                         <span>68</span>
                       </div>
