@@ -23,7 +23,7 @@ const PROBLEMS = [
 
 export default function Problem() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-16 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">

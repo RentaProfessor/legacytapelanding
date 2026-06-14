@@ -3,7 +3,7 @@ import { scrollToId } from '../lib/scroll'
 
 export default function Hero({ onOpenWaitlist }) {
   return (
-    <section className="relative overflow-hidden pt-28 pb-20 md:pt-36 md:pb-28">
+    <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Copy */}

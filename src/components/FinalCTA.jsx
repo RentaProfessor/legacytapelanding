@@ -3,7 +3,7 @@ import { scrollToId } from '../lib/scroll'
 
 export default function FinalCTA({ onOpenWaitlist }) {
   return (
-    <section className="bg-tape-black py-20 md:py-28">
+    <section className="bg-tape-black py-16 md:py-28">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
           The stories your family will wish it asked for

@@ -10,7 +10,7 @@ export default function AboutPage({ onOpenWaitlist }) {
   }, [])
 
   return (
-    <main className="pt-28 pb-20 md:pt-36 md:pb-28">
+    <main className="pt-28 pb-16 md:pt-36 md:pb-28">
       <article className="mx-auto max-w-2xl px-6">
         <Link
           to="/"

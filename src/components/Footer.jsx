@@ -77,7 +77,7 @@ export default function Footer({ onOpenWaitlist }) {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 sm:flex-row">
           <p className="text-center text-xs text-white/30 sm:text-left">
-            &copy; {new Date().getFullYear()} Legacy Tape. A FutureClarity Technologies product.
+            Built by FutureClarity Technologies · {new Date().getFullYear()}
           </p>
           <button
             type="button"
