@@ -6,8 +6,12 @@
   --color-graphite: #4A4A4A;
   --color-muted-gray: #8A8A8A;
   --color-warm-white: #FFFDF9;
-  --color-amber: #C8804A;
-  --color-amber-dark: #A8643A;
+  /* Accent: vintage hi-fi teal. Token keeps the "amber" name so every
+     bg-amber / text-amber utility across the app recolors at once. The
+     value is tuned to pass contrast on both the cream and tape-black
+     sections (and white text on the buttons). */
+  --color-amber: #207A6E;
+  --color-amber-dark: #186056;
   --color-soft-red: #B85C4E;
   --color-tape-black: #1A1A1A;
   --color-metallic: #D4CFC8;
