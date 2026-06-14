@@ -1,4 +1,5 @@
 import { ArrowRight, Play } from 'lucide-react'
+import { scrollToId } from '../lib/scroll'
 
 export default function Hero({ onOpenWaitlist }) {
   return (
@@ -35,7 +36,7 @@ export default function Hero({ onOpenWaitlist }) {
               <button
                 type="button"
                 onClick={() => {
-                  document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })
+                  scrollToId('demo')
                   setTimeout(() => window.dispatchEvent(new Event('demo-autoplay')), 800)
                 }}
                 className="inline-flex items-center gap-2 rounded-full border border-metallic bg-warm-white px-7 py-3.5 text-sm font-semibold text-charcoal shadow-sm transition-all hover:border-charcoal/20 hover:shadow-md"
@@ -56,7 +57,11 @@ export default function Hero({ onOpenWaitlist }) {
               <img
                 src="/product-hero.png"
                 alt="Legacy Tape recorder device alongside the companion mobile app"
-                className="w-full rounded-2xl shadow-2xl"
+                width="1024"
+                height="775"
+                fetchPriority="high"
+                decoding="async"
+                className="h-auto w-full rounded-2xl shadow-2xl"
               />
             </div>
           </div>

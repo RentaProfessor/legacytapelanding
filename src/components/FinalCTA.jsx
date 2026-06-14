@@ -1,4 +1,5 @@
 import { ArrowRight, Play } from 'lucide-react'
+import { scrollToId } from '../lib/scroll'
 
 export default function FinalCTA({ onOpenWaitlist }) {
   return (
@@ -27,7 +28,7 @@ export default function FinalCTA({ onOpenWaitlist }) {
           <button
             type="button"
             onClick={() => {
-              document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })
+              scrollToId('demo')
               setTimeout(() => window.dispatchEvent(new Event('demo-autoplay')), 800)
             }}
             className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white/80 transition-all hover:border-white/30 hover:text-white"

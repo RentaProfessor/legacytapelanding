@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { scrollToId } from '../lib/scroll'
 import Hero from '../components/Hero'
 import Problem from '../components/Problem'
 import HowItWorks from '../components/HowItWorks'
@@ -18,9 +19,7 @@ export default function LandingPage({ onOpenWaitlist }) {
   useEffect(() => {
     if (!hash) return
     const id = hash.slice(1)
-    requestAnimationFrame(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-    })
+    requestAnimationFrame(() => scrollToId(id))
   }, [hash])
 
   return (

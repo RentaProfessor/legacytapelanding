@@ -52,3 +52,22 @@ body {
 .animate-fade-in-up {
   animation: fade-in-up 0.7s ease-out both;
 }
+
+/* Respect the OS "Reduce Motion" setting (WCAG 2.3.3). Near-instantly
+   resolves every animation and transition, and disables smooth scrolling,
+   so the spinning reels, fade-ins, accordion, and modal all settle
+   immediately for motion-sensitive users. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

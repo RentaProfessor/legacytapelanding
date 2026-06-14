@@ -68,7 +68,7 @@ export default function Navbar({ onOpenWaitlist }) {
       </nav>
 
       {mobileOpen && (
-        <div className="border-t border-metallic/40 bg-cream/95 backdrop-blur-lg lg:hidden">
+        <div className="border-t border-metallic/40 bg-cream/95 backdrop-blur-lg overscroll-contain lg:hidden">
           <ul className="flex flex-col gap-1 px-6 py-4">
             {SECTION_LINKS.map((link) => (
               <li key={link.hash}>
